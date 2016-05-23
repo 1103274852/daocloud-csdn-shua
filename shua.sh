@@ -3,8 +3,10 @@ while true
 do
 	for i in `seq 5`
 	do
-		curl -s $URL > /dev/null
+		curl -s $1 > /dev/null
 		cnt=$(($cnt+1))
+		sleep 1
 	done
-	echo cnt
+	echo $cnt
+	sleep 10
 done

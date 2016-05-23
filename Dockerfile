@@ -5,4 +5,5 @@ ADD https://raw.githubusercontent.com/1103274852/daocloud-csdn-shua/master/shua.
 RUN chmod +x shua.sh
 ENV URL http://blog.csdn.net/lzr010506/article/details/51438863
 EXPOSE 80
-CMD shua.sh $URL
+RUN mv shua.sh /usr/bin/
+CMD /usr/bin/shua.sh $URL
